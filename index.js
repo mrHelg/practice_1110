@@ -15,4 +15,17 @@ const power = (num, exp = 1) => {
 };
 console.log(power(2, -2));
 
+// Brackets
+const printBrackets = (num) => {
+  if (!Number.isInteger(num)) {
+    throw new RangeError('Number must be integer');
+  }
+  if (num <= 1) {
+    return '()';
+  }
+  return '(' + printBrackets(num-1) + ')';
+  // optional as a pattern string: 
+  // return `(${printBrackets(num-1)})`;
+};
+console.log(printBrackets(3));
 
