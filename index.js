@@ -33,3 +33,7 @@ console.log(printBrackets(3));
 const arr = [1, 6, 8, 2, 4, -10, 11];
 console.log('Min value = ' + Math.min(...arr));
 console.log('Max value = ' + Math.max(...arr));
+
+// Multiplication of arguments
+const multiArgs = (...arr) => arr.reduce((result, n) => result * n);
+console.log(multiArgs(1, 2, 3, 4, 5));
