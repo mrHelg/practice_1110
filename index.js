@@ -2,8 +2,11 @@
 
 // Exponentiation
 const power = (num, exp = 1) => {
+  if (typeof num !== 'number') {
+    throw new TypeError('Value must be number');
+  }
   if (!Number.isInteger(exp)) {
-    throw new RangeError('Exp must be integer');
+    throw new TypeError('Exp must be integer');
   }
   if (exp === 0) {
     return 1;
