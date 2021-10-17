@@ -23,9 +23,13 @@ const printBrackets = (num) => {
   if (num <= 1) {
     return '()';
   }
-  return '(' + printBrackets(num-1) + ')';
-  // optional as a pattern string: 
+  return '(' + printBrackets(num - 1) + ')';
+  // optional as a pattern string:
   // return `(${printBrackets(num-1)})`;
 };
 console.log(printBrackets(3));
 
+// Find min-max value
+const arr = [1, 6, 8, 2, 4, -10, 11];
+console.log('Min value = ' + Math.min(...arr));
+console.log('Max value = ' + Math.max(...arr));
